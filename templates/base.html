@@ -14,7 +14,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="{% url 'movie_review:index' %}">
           <img src="{% static 'movie_review/logo.png' %}" alt="Logo" class="d-inline-block align-text-top"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,11 +30,12 @@
             </li>
           </ul>
         </div>
-      </nav>
-      <div class="container">
-        {% block content %}{% endblock %}
       </div>
-      {% bootstrap_javascript %}
-    </body>
+    </nav>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+    {% bootstrap_javascript %}
+  </body>
 
-  </html>
+</html>
