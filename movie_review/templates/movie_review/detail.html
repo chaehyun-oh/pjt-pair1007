@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
   <div class='mt-3'>
+    <div>
+      {% comment %} {% if profile.photo %}
+        <img src="{{ profile.photo.url }}" alt="">
+      {% endif %} {% endcomment %}
+    </div>
     <h2>{{ review.title }}</h2>
     <div class='d-flex align-items-center'>
       <h4 class='me-3'>

@@ -9,7 +9,7 @@
       <h3>리뷰 수정</h3>
     {% endif %}
   </div>
-  <form action="" method="POST">
+  <form action="" method="POST" enctype='multipart/form-data'>
     {% csrf_token %}
     {% bootstrap_form review_form %}
     <button type="submit" class='btn btn-primary'>등록</button>

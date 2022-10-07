@@ -1,3 +1,4 @@
+import profile
 from django.shortcuts import render, redirect
 
 from movie_review.models import Review
@@ -13,6 +14,7 @@ def index(request):
     return render(request, 'movie_review/index.html', context)
 
 def create(request):
+    # profile.phto = request.FILES['photo']
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
         if review_form.is_valid():
